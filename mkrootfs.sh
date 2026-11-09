@@ -88,7 +88,9 @@ while getopts "b:C:c:hr:x:z:o:V" opt; do
         b) SYSPKG="$OPTARG";;
         C) XBPS_CONFFILE="-C $OPTARG";;
         c) XBPS_CACHEDIR="--cachedir=$OPTARG";;
-        r) XBPS_REPOSITORY="$XBPS_REPOSITORY --repository=$OPTARG";;
+        # hack for Nick
+        #r) XBPS_REPOSITORY="$XBPS_REPOSITORY --repository=$OPTARG";;
+        r) XBPS_REPOSITORY="--repository=$OPTARG";;
         x) COMPRESSOR_THREADS="$OPTARG" ;;
         z) COMPRESSOR="$OPTARG" ;;
         o) FILENAME="$OPTARG" ;;
