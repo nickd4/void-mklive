@@ -16,3 +16,11 @@ release/
 packer/cloud-*/
 packer/vagrant-*/
 mklive-build*/
+
+# Nick
+/initrd-7.3.3_1
+/rootfs
+/vmlinuz-7.3.3_1
+/void-x86_64-musl-ROOTFS-*.tar
+/void-x86_64-musl-ROOTFS-*.qcow2
+

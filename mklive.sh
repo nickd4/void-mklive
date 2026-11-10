@@ -506,7 +506,9 @@ while getopts "a:b:r:H:c:C:T:Kk:l:i:I:S:e:s:o:p:g:v:P:x:Vh" opt; do
 	case $opt in
 		a) TARGET_ARCH="$OPTARG";;
 		b) BASE_SYSTEM_PKG="$OPTARG";;
+		# hack for Nick
 		r) XBPS_REPOSITORY="--repository=$OPTARG $XBPS_REPOSITORY";;
+		#r) XBPS_REPOSITORY="--repository=$OPTARG";;
 		c) XBPS_CACHEDIR="$OPTARG";;
 		H) XBPS_HOST_CACHEDIR="$OPTARG";;
 		g) IGNORE_PKGS+=($OPTARG) ;;
@@ -531,7 +533,8 @@ while getopts "a:b:r:H:c:C:T:Kk:l:i:I:S:e:s:o:p:g:v:P:x:Vh" opt; do
 	esac
 done
 shift $((OPTIND - 1))
-XBPS_REPOSITORY="$XBPS_REPOSITORY --repository=https://repo-default.voidlinux.org/current --repository=https://repo-default.voidlinux.org/current/musl --repository=https://repo-default.voidlinux.org/current/aarch64"
+# hack for Nick
+#XBPS_REPOSITORY="$XBPS_REPOSITORY --repository=https://repo-default.voidlinux.org/current --repository=https://repo-default.voidlinux.org/current/musl --repository=https://repo-default.voidlinux.org/current/aarch64"
 
 # Configure dracut to use overlayfs for the writable overlay.
 BOOT_CMDLINE="$BOOT_CMDLINE rd.overlayfs=1 "
